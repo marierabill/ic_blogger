@@ -20,7 +20,10 @@ function add_category()
 				if(!$result)
 				{
 					die("Could not send data " . mysqli_error($connection));
-				}
+				}else
+					{
+						header("Location: ../categories.php?category_added");
+					}
 			}
 	}
 }
