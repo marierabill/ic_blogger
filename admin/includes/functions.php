@@ -17,7 +17,7 @@ function add_category()
 				$query = "INSERT INTO categories (cat_title) VALUES ('$cat_title')";
 				$result = mysqli_query($connection, $query);
 				
-				if(!result)
+				if(!$result)
 				{
 					die("Could not send data " . mysqli_error($connection));
 				}
