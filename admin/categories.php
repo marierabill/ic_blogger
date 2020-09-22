@@ -29,8 +29,17 @@
 
 						</div>
                	<div class="col-sm-6">
-               
-						</div>
+					<table class="table table-bordered table-striped table-hover ">
+						<thead>
+							<th>Category ID</th>
+							<th>Category Title</th>
+						</thead>
+						<tbody>
+							<?php show_category();?>
+						<tbody>
+					</table>
+					
+				</div>
                 <!-- /.row -->
             </div>
         </div>
