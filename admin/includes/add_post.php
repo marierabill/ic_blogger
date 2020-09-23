@@ -1,3 +1,8 @@
+<?php
+	$sql = "SELECT * FROM categories";
+	$res = mysqli_query($connection, $sql);
+?>
+
 <h2>Add Posts</h2>
 <div class="container">
 	<div class="row">
