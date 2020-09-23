@@ -50,6 +50,12 @@
 				</div>
 				
 				<div class="form-group">
+					<label for="">Post Content</label>
+					<textarea name="content" rows="8" cols="80" class="form-control">
+					</textarea>
+				</div>
+				
+				<div class="form-group">
 					<label for="">Post Tags</label>
 					<input type="text" name="tags" placeholder="Separate tags with a coma (,)" class="form-control"> 
 				</div>

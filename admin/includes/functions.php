@@ -71,5 +71,26 @@ function delete_category()
 }
 delete_category();
 
+function add_post()
+{
+	global $connection;
+	
+	if(isset($_POST['publish']))
+	{
+		$post_title = $_POST['title'];
+		$post_author = $_POST['author'];
+		$post_category = $_POST['category'];
+		$post_category_id = $_POST['category_id'];
+		$post_content = $_POST['content'];
+		$post_tags = $_POST['tags'];
+		$post_status = $_POST['status'];
+		
+		$date = date("l d F Y");
+		$post_views = 0;
+		$post_comment_count = 0;
+		
+	}
+}
+add_post();
 
 ?>
