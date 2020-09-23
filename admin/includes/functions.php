@@ -88,7 +88,7 @@ function add_post()
 		$date = date("l d F Y");
 		$post_views = 0;
 		$post_comment_count = 0;
-		
+	//---------Upload Post Image---------\\
 		if(isset($_FILES['post_image']))
 		{
 			$dir = "../post_images/";
@@ -102,6 +102,11 @@ function add_post()
 				echo "Oooops!!!....Something went wrong while uploading this image";
 			}
 		}
+	//---------Upload Post Image---------\\
+
+		$query = "INSERT INTO posts(post_title, post_author, post_category, post_category_id, post_content, post_image, post_date, post_comment_count, post_views, post_tags, post_status)
+							VALUES('$post_title', '$post_author', '$post_category', '$post_category_id', '$post_content', '$target_file', '$date', '$post_comment_count', '$post_views', '$post_tags', '$post_status')";
+		
 	}
 }
 add_post();
