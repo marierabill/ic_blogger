@@ -63,7 +63,7 @@ function delete_category()
 					die("Could not delete data " . mysqli_error($connection));
 				}else
 					{
-						header("Location: ../categories.php?category_deleted");
+						header("Location: categories.php?category_deleted");
 					}
 		
 	}
