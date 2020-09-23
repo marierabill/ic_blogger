@@ -44,8 +44,32 @@ function show_category()
 		echo "<tr>";
 		echo "<td>{$cat_id}</td>";
 		echo "<td>{$cat_title}</td>";
+		echo "<td><a href='categories.php?delete_cat={$cat_id}'>Delete</a></td>";
 		echo "</tr>";
 	}
 }
+
+function delete_category()
+{
+	global $connection;
+	if(isset($_GET['delete_cat']))
+	{
+		$cat_id = $_GET['delete_cat'];
+		$query = "DELETE FROM categories WHERE cat_id = $cat_id";
+		$result = mysqli_query($connection, $query);
+		
+		if(!$result)
+				{
+					die("Could not delete data " . mysqli_error($connection));
+				}else
+					{
+						header("Location: categories.php?category_deleted");
+					}
+		
+	}
+	
+}
+delete_category();
+
 
 ?>
