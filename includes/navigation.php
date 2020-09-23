@@ -37,9 +37,7 @@
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="category.php">Categories</a>
-          </li>
+          <?php show_cat(); ?>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
