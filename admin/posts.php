@@ -13,22 +13,42 @@
 			<!-- Page Heading -->
 			<div class="row">
 
-					<h1 class="page-header">
-						Welcome to the Administration Panel
-					</h1>
-</div>
-				</div>
-
-
+				<h1 class="page-header">
+					Welcome to the Administration Panel
+				</h1>
 			</div>
-
-			<!-- /.row -->
-
 		</div>
-		<!-- /.container-fluid -->
-
+		
+		<?php 
+			if(isset($_GET['source']))
+			{
+				$source = $_GET['source'];
+			}
+			switch ($source)
+			{
+				case 'add_new':
+					include 'includes/add_post.php';
+					break;
+				
+				case '123':
+					echo 123;
+					break;
+				
+				default:
+					header("Location: posts.php");
+					break;
+			}
+		?>
+		
 	</div>
-	<!-- /#page-wrapper -->
+		<!-- /.row -->
+		
+		
+		
+</div>
+<!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
