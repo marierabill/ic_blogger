@@ -89,6 +89,12 @@ function add_post()
 		$post_views = 0;
 		$post_comment_count = 0;
 		
+		if(isset($_FILES['post_image']))
+		{
+			echo "<pre>";
+			print_r($_FILES['post_image']);
+			echo "</pre>";
+		}
 	}
 }
 add_post();
