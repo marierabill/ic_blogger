@@ -70,7 +70,7 @@
 				
 				<div class="form-group">
 					<label for="">Post Image</label>
-					<input type="file" name="image" class="form-control"> 
+					<input type="file" name="post_image" class="form-control"> 
 				</div>
 				
 				<div class="form-group">
