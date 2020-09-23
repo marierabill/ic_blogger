@@ -104,8 +104,25 @@ function add_post()
 		}
 	//---------Upload Post Image---------\\
 
-		$query = "INSERT INTO posts(post_title, post_author, post_category, post_category_id, post_content, post_image, post_date, post_comment_count, post_views, post_tags, post_status)
-							VALUES('$post_title', '$post_author', '$post_category', '$post_category_id', '$post_content', '$target_file', '$date', '$post_comment_count', '$post_views', '$post_tags', '$post_status')";
+		$query = "INSERT INTO posts(post_title, post_author, post_category, post_category_id, 
+									post_content, post_image, post_date, post_comment_count, 
+									post_views, post_tags, post_status)
+									
+							VALUES('$post_title', '$post_author', '$post_category', '$post_category_id', 
+							'$post_content', '$target_file', '$date', '$post_comment_count', 
+							'$post_views', '$post_tags', '$post_status')";
+							
+		$result = mysqli_query($connection, $query);
+		
+		if(!result)
+		{
+			die("Could not send data " . mysqli_error($connection));
+			header("Location: ../posts.php?source=add_new");
+		}
+		else
+		{
+			header("Location: ../posts.php?Post_added");
+		}
 		
 	}
 }
