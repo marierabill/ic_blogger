@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6">
-			<form action="" method="post">
+			<form action="includes/functions.php" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="">Post Title</label>
 					<input type="text" name="title" placeholder="Post Title" class="form-control"> 
