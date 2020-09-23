@@ -21,7 +21,14 @@
 				<div class="form-group">
 					<label for="">Post Category</label>
 					<select class="form-control" name="category">
-						<option value=""></option>
+						<?php
+							while($row = mysqli_fetch_array($res))
+							{
+								$cat_title = $row['cat_title'];
+								echo "<option value='$cat_title'>$cat_title</option>";
+							}
+						?>
+						
 					</select>
 				</div>
 				
