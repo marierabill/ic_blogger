@@ -33,6 +33,7 @@
 						<thead>
 							<th>Category ID</th>
 							<th>Category Title</th>
+							<th>Delete</th>
 						</thead>
 						<tbody>
 							<?php show_category();?>
