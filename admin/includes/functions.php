@@ -91,9 +91,16 @@ function add_post()
 		
 		if(isset($_FILES['post_image']))
 		{
-			echo "<pre>";
-			print_r($_FILES['post_image']);
-			echo "</pre>";
+			$dir = "../post_images/";
+			$target_file = $dir.basename($_FILES['post_image']['name']);
+			if(move_uploaded_file($_FILES['post_image']['tmp_name'], $target_file))
+			{
+				echo "Image was uploaded";
+			}
+			else
+			{
+				echo "Oooops!!!....Something went wrong while uploading this image";
+			}
 		}
 	}
 }
