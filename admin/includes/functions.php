@@ -114,7 +114,7 @@ function add_post()
 							
 		$result = mysqli_query($connection, $query);
 		
-		if(!result)
+		if(!$result)
 		{
 			die("Could not send data " . mysqli_error($connection));
 			header("Location: ../posts.php?source=add_new");

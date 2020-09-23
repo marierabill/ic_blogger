@@ -51,8 +51,7 @@
 				
 				<div class="form-group">
 					<label for="">Post Content</label>
-					<textarea name="content" rows="8" cols="80" class="form-control">
-					</textarea>
+					<textarea name="content" rows="8" cols="80" class="form-control"></textarea>
 				</div>
 				
 				<div class="form-group">
