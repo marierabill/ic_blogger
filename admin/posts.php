@@ -17,30 +17,52 @@
 					Welcome to the Administration Panel
 				</h1>
 				
-				<?php 
-					if(isset($_GET['source']))
-					{
-						$source = $_GET['source'];
-					}
-					switch ($source)
-					{
-						case 'add_new':
-							include 'includes/add_post.php';
-							break;
-						
-						case '123':
-							echo 123;
-							break;
-						
-						default:
-							header("Location: posts.php");
-							break;
-					}
-				?>
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<th>Post ID</th>
+						<th>Post Title</th>
+						<th>Post Author</th>
+						<th>Post Category</th>
+						<th>Post Status</th>
+						<th>Post Image</th>
+						<th>Post Content</th>
+						<th>Post Date</th>
+						<th>Post Tags</th>
+						<th>Post Comments</th>
+						<th>Post Views</th>
+						<th>Approve Post</th>
+						<th>Unapprove Post</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</thead>
+					
+				</table>
+				
+				
 			</div>
 		</div>
 		
-		
+				<?php
+					if(isset($_GET['source']))
+					{
+						$source = $_GET['source'];
+					
+						switch ($source)
+						{
+							case 'add_new':
+								include 'includes/add_post.php';
+								break;
+							
+							case '123':
+								echo 123;
+								break;
+							
+							default:
+								header("Location: posts.php");
+								break;
+						}
+					}
+				?>
 		
 	</div>
 		<!-- /.row -->

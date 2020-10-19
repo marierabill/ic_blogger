@@ -104,12 +104,12 @@ function add_post()
 		}
 	//---------Upload Post Image---------\\
 
-		$query = "INSERT INTO posts(post_title, post_author, post_category, post_category_id, 
-									post_content, post_image, post_date, post_comment_count, 
+		$query = "INSERT INTO posts (post_title, post_category, post_category_id, post_author,
+									post_content, post_date, post_image, post_comment_count, 
 									post_views, post_tags, post_status)
 									
-							VALUES('$post_title', '$post_author', '$post_category', '$post_category_id', 
-							'$post_content', '$target_file', '$date', '$post_comment_count', 
+							VALUES ('$post_title', '$post_category', '$post_category_id', '$post_author',
+							'$post_content', '$date', '$target_file', '$post_comment_count', 
 							'$post_views', '$post_tags', '$post_status')";
 							
 		$result = mysqli_query($connection, $query);
@@ -121,7 +121,7 @@ function add_post()
 		}
 		else
 		{			
-			header("Location: ../posts.php?Post_added");
+			header("Location: ../posts.php?post_added:-)");
 		}
 		
 	}
