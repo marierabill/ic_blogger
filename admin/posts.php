@@ -36,6 +36,10 @@
 						<th>Delete</th>
 					</thead>
 					
+					<tbody>
+						<?php show_posts(); ?>
+					</tbody>
+					
 				</table>
 				
 				

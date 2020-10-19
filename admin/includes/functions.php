@@ -1,7 +1,7 @@
 <?php include "db.php" ?>
 
 <?php
-
+//--------------ADD CATEGORY--------------\\
 function add_category()
 {
 	global $connection;
@@ -29,7 +29,7 @@ function add_category()
 }
 add_category();
 
-
+//--------------SHOW CATEGORY--------------\\
 function show_category()
 {
 	global $connection;
@@ -49,6 +49,7 @@ function show_category()
 	}
 }
 
+//--------------DELETE CATEGORY--------------\\
 function delete_category()
 {
 	global $connection;
@@ -71,6 +72,7 @@ function delete_category()
 }
 delete_category();
 
+//--------------ADD POST--------------\\
 function add_post()
 {
 	global $connection;
@@ -127,5 +129,47 @@ function add_post()
 	}
 }
 add_post();
+
+//--------------READ POST--------------//
+function show_posts()
+{
+	global $connection;
+	$query = "SELECT * FROM posts";
+	$result = mysqli_query($connection, $query);
+	
+	while($row = mysqli_fetch_assoc($result))
+	{
+		$post_id = $row['post_id'];
+		$post_title = $row['post_title'];
+		$post_author = $row['post_author'];
+		$post_category = $row['post_category'];
+		$post_category_id = $row['post_category_id'];
+		$post_content = $row['post_content'];
+		$post_tags = $row['post_tags'];
+		$post_status = $row['post_status'];
+		$post_image = $row['post_image'];		
+		$date = $row['post_date'];
+		$post_views = $row['post_views'];
+		$post_comment_count = $row['post_comment_count'];
+		
+		echo "<tr>";
+		echo "<td>{$post_id}</td>";
+		echo "<td>{$post_title}</td>";
+		echo "<td>{$post_author}</td>";
+		echo "<td>{$post_category}</td>";
+		echo "<td>{$post_status}</td>";
+		echo "<td><img src='post_images/{$post_image}' width='50px'></td>";
+		echo "<td>{$post_content}</td>";		
+		echo "<td>{$date}</td>";
+		echo "<td>{$post_tags}</td>";
+		echo "<td>{$post_comment_count}</td>";
+		echo "<td>{$post_views}</td>";
+		echo "<td><a href='posts.php?approve_post=$post_id'>Approve</a></td>";
+		echo "<td><a href='posts.php?unapprove_post=$post_id'>Unapprove</a></td>";
+		echo "<td><a href='posts.php?edit_post=$post_id'>Edit</a></td>";
+		echo "<td><a href='posts.php?delete_post=$post_id'>Delete</a></td>";
+		echo "</tr>";
+	}
+}
 
 ?>
