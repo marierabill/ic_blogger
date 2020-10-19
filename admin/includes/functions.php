@@ -120,7 +120,7 @@ function add_post()
 			header("Location: ../posts.php?source=add_new");
 		}
 		else
-		{
+		{			
 			header("Location: ../posts.php?Post_added");
 		}
 		
