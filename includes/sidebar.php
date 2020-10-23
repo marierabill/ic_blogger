@@ -1,6 +1,9 @@
-
+<div class="sidebar-box">
+	<h3 class="heading">Recent Posts</h3>
+	<div class="post-entry-sidebar">
+		<ul>
 <?php
-	$query = "SELECT * FROM posts LIMIT 5";
+	$query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT 3";
 	$result = mysqli_query($connection, $query);
 	
 	while($row = mysqli_fetch_assoc($result))
@@ -18,26 +21,24 @@
 		$post_views = $row['post_views'];
 		$post_comment_count = $row['post_comment_count'];
 ?>
-<div class="sidebar-box">
-	<h3 class="heading">Recent Posts</h3>
-	<div class="post-entry-sidebar">
-		<ul>
+
 			<li>
         <a href="">
-          <img src="images/img_2.jpg" alt="Image placeholder" class="mr-4">
+          <img src="admin/post_images/<?php echo $post_image; ?>" alt="Image placeholder" class="mr-4">
           <div class="text">
-            <h4>How to Find the Video Games of Your Youth</h4>
+            <h4><?php echo $post_title; ?></h4>
             <div class="post-meta">
               <span class="mr-2"><?php echo $date; ?> </span>
             </div>
           </div>
         </a>
 			</li>
-		</ul>
-	</div>
-</div>
+		
 <?php
 	
 	}
 
 ?>
+		</ul>
+	</div>
+</div>
