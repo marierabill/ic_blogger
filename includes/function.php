@@ -15,7 +15,7 @@ function show_cat()
 		
 		echo "
 			<li class='nav-item dropdown'>
-				<a class='nav-link' href='category.php'>{$cat_title}</a>
+				<a class='nav-link' href='category.php?cat_id=$cat_id'>{$cat_title}</a>
 			</li>
 			  ";
 	}
