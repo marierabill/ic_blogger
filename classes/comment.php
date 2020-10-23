@@ -22,6 +22,28 @@ class Comment
 			return false;
 		}
 	}
+	
+	public function getApprovedComments($id)
+	{
+		$query = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id = $id AND status = 'Approved' ");
+		
+		
+		
+		while($row = mysqli_fetch_assoc($query))
+		{
+			$id = $row['id'];
+			$post_id = $row['post_id'];
+			$name = $row['comment_name'];
+			$body = $row['body'];
+?>
+			
+					<h3><?php echo $name ?></h3>
+					<p><?php echo $body ?></p>
+					<p><a href="#" class="reply rounded">Reply</a></p>
+<?php
+		}
+		
+	}
 }
 
 ?>
