@@ -1,5 +1,9 @@
-<?php include "admin/includes/db.php"; ?>
-<?php include "function.php"; ?>
+<?php 
+	include "admin/includes/db.php"; 
+	include "classes/comment.php";  
+	include "function.php";  
+	$comment_obj = new Comment($connection);
+?>
 
 <!doctype html>
 <html lang="en">
