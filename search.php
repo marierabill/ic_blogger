@@ -18,7 +18,7 @@
           <div class="row blog-entries">
             <div class="col-md-12 col-lg-8 main-content">
               <div class="row">
-                <?php include 'includes/posts.php'; ?>
+                <?php include 'includes/search_post.php'; ?>
               </div>
 
             </div>
