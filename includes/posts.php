@@ -18,7 +18,7 @@
 		$post_comment_count = $row['post_comment_count'];
 ?>
 <div class="col-md-6">
-  <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+  <a href="single.php?post=<?php echo $post_id; ?>" class="blog-entry element-animate" data-animate-effect="fadeIn">
     <img src="admin/post_images/<?php echo $post_image; ?>" width="350px" height="350px" alt="Image placeholder">
     <div class="blog-content-body">
       <div class="post-meta">
