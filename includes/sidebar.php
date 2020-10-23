@@ -23,7 +23,7 @@
 ?>
 
 			<li>
-        <a href="">
+        <a href="single.php?post=<?php echo $post_id; ?>">
           <img src="admin/post_images/<?php echo $post_image; ?>" alt="Image placeholder" class="mr-4">
           <div class="text">
             <h4><?php echo $post_title; ?></h4>
