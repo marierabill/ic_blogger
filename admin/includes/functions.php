@@ -79,12 +79,12 @@ function add_post()
 	
 	if(isset($_POST['publish']))
 	{
-		$post_title = $_POST['title'];
-		$post_author = $_POST['author'];
+		$post_title = mysqli_real_escape_string($connection, $_POST['title']);
+		$post_author = mysqli_real_escape_string($connection, $_POST['author']);
 		$post_category = $_POST['category'];
 		$post_category_id = $_POST['category_id'];
-		$post_content = $_POST['content'];
-		$post_tags = $_POST['tags'];
+		$post_content = mysqli_real_escape_string($connection, $_POST['content']);
+		$post_tags = mysqli_real_escape_string($connection, $_POST['tags']);
 		$post_status = $_POST['status'];
 		
 		$date = date("l d F Y");
