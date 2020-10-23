@@ -1,4 +1,5 @@
 <?php
+	(isset($_GET['cat_id'])) ? $cat_id = $_GET['cat_id'] : header("Location: index.php");
 	$query = "SELECT * FROM posts";
 	$result = mysqli_query($connection, $query);
 	
