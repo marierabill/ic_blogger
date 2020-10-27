@@ -57,7 +57,29 @@
 
 
             <div class="pt-5">
-              <h3 class="mb-5">6 Comments</h3>
+              <h3 class="mb-5">
+				<?php
+					(isset($_GET['post'])) ? $post_id = $_GET['post'] : $post_id = 0;
+					$query = mysqli_query($connection, "SELECT * FROM comments WHERE status = 'Approved' AND post_id = $post_id");
+					$num_comments = mysqli_num_rows($query);
+					//echo $num_comments . " comment(s)";
+					
+					if($num_comments < 1 )
+					{
+						echo $num_comments . " comments";
+					}else
+						if($num_comments == 1 )
+						{
+							echo $num_comments . " comment";
+						}else
+							if($num_comments > 1 )
+							{
+								echo $num_comments . " comments";
+							}
+					
+					
+				?>
+			  </h3>
               <ul class="comment-list">                
                 <li class="comment">
                   
