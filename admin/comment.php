@@ -17,7 +17,26 @@
                           <h1 class="page-header">
                             Welcome to the Administration Panel
                         </h1>
-
+						<div class="table-responsive">
+							<table class="table table-striped table-hover table-bordered">
+								<thead>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Body</th>
+									<th>Status</th>
+									<th>Post ID</th>
+								</thead>
+								
+								<tbody>
+									<?php 
+										require '../classes/comment.php';
+										$comment_obj = new Comment($connection);										
+										$comment_obj->getComments();										
+									?>
+								</tbody>
+							</table>
+						</div>
                     </div>
                     </div>
                 </div>
