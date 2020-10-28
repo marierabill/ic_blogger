@@ -15,7 +15,7 @@
 				
 				<div class="form-group">
 					<label for="">Post Author</label>
-					<input type="text" name="author" placeholder="Post Author" class="form-control"> 
+					<input type="text" name="author" value="<?php echo $_SESSION['username']; ?>" placeholder="Post Author" class="form-control"> 
 				</div>
 				
 				<div class="form-group">
