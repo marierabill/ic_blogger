@@ -1,6 +1,10 @@
-<?php ob_start(); ?>
-<?php include "db.php" ?>
-<?php include "functions.php" ?>
+<?php 
+	ob_start();
+	session_start();
+	include "db.php";
+	include "functions.php";
+	(isset($_SESSION['userLoggedIn'])) ? $user = $_SESSION['userLoggedIn'] : header("Location: ../cms_admin.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
