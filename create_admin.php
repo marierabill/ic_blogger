@@ -13,7 +13,7 @@
 </style>
 
 
-<form class="form" action="includes/form_handler/create.php" method="post" role="form">
+<form class="form" action="includes/form_handler/create.php" method="post" role="form" autocomplete="off">
 <h3>Create a New Admin</h3>
 	<div class="form-group">
 		<label>Username</label>
@@ -34,6 +34,6 @@
 		</ul>
 	</div>
 	<div class="form-group">
-		<input class="btn btn-primary" type="submit" name="create_submit" placeholder="Continue">
+		<input class="btn btn-primary" type="submit" name="create_submit" value="Continue">
 	</div>
 </form>
