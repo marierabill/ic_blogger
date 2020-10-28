@@ -1,4 +1,5 @@
-<?php 
+<?php
+	session_start();
 	include "admin/includes/db.php"; 
 	include "classes/comment.php";  
 	include "function.php";  
