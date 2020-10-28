@@ -26,6 +26,14 @@
 									<th>Body</th>
 									<th>Status</th>
 									<th>Post ID</th>
+									<?php
+										if($role === "Admin")
+										{
+									?>
+											<th colspan="3" class="text-center">Action</th>
+									<?php
+										}
+									?>
 								</thead>
 								
 								<tbody>
