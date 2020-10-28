@@ -3,7 +3,16 @@
 	session_start();
 	include "db.php";
 	include "functions.php";
+	
 	(isset($_SESSION['userLoggedIn'])) ? $user = $_SESSION['userLoggedIn'] : header("Location: ../cms_admin.php");
+	
+	$sql = mysqli_query($connection, "SELECT * FROM users WHERE email = '$user'");
+	$row = mysqli_fetch_array($sql);
+	
+	$username = $row['username'];
+	$profile = $row['profile_pic'];
+	$role = $row['role'];
+	
 ?>
 
 <!DOCTYPE html>
