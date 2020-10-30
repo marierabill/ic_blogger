@@ -29,18 +29,17 @@
 
 						</div>
                	<div class="col-sm-6">
-					<table class="table table-bordered table-striped table-hover ">
-						<thead>
-							<th>Category ID</th>
-							<th>Category Title</th>
-							<th>Delete</th>
-						</thead>
-						<tbody>
-							<?php show_category();?>
-						<tbody>
-					</table>
-					
-				</div>
+               <table class="table table-bordered table-striped table-hover">
+                 <thead>
+                   <th>Category ID</th>
+                   <th>Category Title</th>
+                    <th>Delete</th>
+                 </thead>
+                 <tbody>
+                   <?php show_category(); ?>
+                 </tbody>
+               </table>
+						</div>
                 <!-- /.row -->
             </div>
         </div>

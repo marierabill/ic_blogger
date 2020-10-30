@@ -1,11 +1,8 @@
-<?php
-	session_start();
-	include "admin/includes/db.php"; 
-	include "classes/comment.php";  
-	include "function.php";  
-	$comment_obj = new Comment($connection);
-?>
-
+<?php session_start(); ?>
+<?php include "db.php"; ?>
+<?php include "function.php"; ?>
+<?php include "classes/Comment.php"; ?>
+<?php $comment_obj = new Comment($connection); ?>
 <!doctype html>
 <html lang="en">
   <head>

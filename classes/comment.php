@@ -1,5 +1,5 @@
 <?php
-(isset($_SESSION['userLoggedIn'])) ? $user = $_SESSION['userLoggedIn'] : header("Location: ../cms_admin.php");	
+(isset($_SESSION['userLogged'])) ? $user = $_SESSION['userLogged'] : header("Location: ../cms_admin.php");	
 $sql = mysqli_query($connection, "SELECT * FROM users WHERE email = '$user'");
 $row = mysqli_fetch_array($sql);
 
@@ -20,7 +20,8 @@ class Comment
 	{
 		if(!empty($body))
 		{
-			$query = mysqli_query($this->con, "INSERT INTO comments VALUES('','$name','$email','$body', 'Unapproved', '$id');");
+			$query = mysqli_query($this->con, "INSERT INTO comments VALUES('','$name','$email','$body', 'Approved', '$id');");
+			
 			if(!$query)
 			{
 				die("Failed ".mysqli_error($this->con));

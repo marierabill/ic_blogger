@@ -13,47 +13,38 @@
 			<!-- Page Heading -->
 			<div class="row">
 
-				<h1 class="page-header">
-					Welcome to the Administration Panel
-				</h1>
-				
-				
-				
-				
-			</div>
-		</div>
-		
-				<?php
-					if(isset($_GET['source']))
-					{
-						$source = $_GET['source'];
-					
-						switch ($source)
-						{
+					<h1 class="page-header">
+						Welcome to the Administration Panel
+					</h1>
+
+
+					<?php
+						if (isset($_GET['source'])) {
+								$source = $_GET['source'];
+
+						switch ($source) {
 							case 'add_new':
-								include 'includes/add_post.php';
+								include "includes/add_post.php";
 								break;
-							
-							case '123':
-								echo 123;
-								break;
-							
 							default:
-								include 'includes/view_post.php';
+								include "includes/view_post.php";
 								break;
 						}
-					}
-				?>
-		
+		}
+					 ?>
+</div>
+				</div>
+
+
+			</div>
+
+			<!-- /.row -->
+
+		</div>
+		<!-- /.container-fluid -->
+
 	</div>
-		<!-- /.row -->
-		
-		
-		
-</div>
-<!-- /.container-fluid -->
-</div>
-<!-- /#page-wrapper -->
+	<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
