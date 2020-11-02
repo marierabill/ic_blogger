@@ -29,20 +29,23 @@
 
       </select>
       </div>
-      <div class="form-group">
+	  
+      <!--div class="form-group">
         <label for="">Post Category ID</label>
       <select class="form-control" name="category_id">
         <?php
+		/*
         $sql = "SELECT * FROM categories";
         $res = mysqli_query($connection, $sql);
           while ($row = mysqli_fetch_array($res)) {
             $cat_title = $row['cat_title'];
               $cat_id = $row['cat_id'];
             echo "<option value='$cat_id'>$cat_id - $cat_title</option>";
-          }
+          }*/
          ?>
       </select>
-      </div>
+      </div-->
+	  
       <div class="form-group">
         <label for="">Post Content</label>
         <textarea name="content" rows="8" cols="80" class="form-control"></textarea>
