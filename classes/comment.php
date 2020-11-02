@@ -20,8 +20,8 @@ class Comment
 	{
 		if(!empty($body))
 		{
-			$query = mysqli_query($this->con, "INSERT INTO comments VALUES('','$name','$email','$body', 'Approved', '$id');");
-			
+			//$query = mysqli_query($this->con, "INSERT INTO comments VALUES('','$name','$email','$body', 'Unapproved', '$id');");
+			$query = mysqli_query($this->con, "INSERT INTO comments(id, comment_name, comment_email, body, post_id) VALUES('','$name','$email','$body', '$id');");
 			if(!$query)
 			{
 				die("Failed ".mysqli_error($this->con));
