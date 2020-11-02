@@ -64,7 +64,13 @@ function add_post(){
     $post_title = $_POST['title'];
     $post_author = $_POST['author'];
     $post_category = $_POST['category'];
-    $post_category_id = $_POST['category_id'];
+    //$post_category_id = $_POST['category_id'];
+	
+	//get cat_id from database
+	$sql = mysqli_query($connection, "SELECT cat_id FROM categories WHERE cat_title = '$post_category'");
+	$row = mysqli_fetch_array($sql);
+	$post_category_id = $row['cat_id'];
+	
     $post_content = mysqli_real_escape_string($connection,$_POST['content']);
     $post_tags = $_POST['tags'];
     $post_status = $_POST['status'];
